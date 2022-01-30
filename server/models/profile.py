@@ -11,6 +11,9 @@ class Profile(TimeStampMixin):
     current_server_key = models.BinaryField(max_length=50, blank=True)
     current_server_key_salt = models.BinaryField(max_length=50, blank=True)
 
+    def __str__(self):
+        return self.user.username
+
 
 @receiver(post_save, sender=User)
 def create_user_profile(sender, instance, created, **kwargs):

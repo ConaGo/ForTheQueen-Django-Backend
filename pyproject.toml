@@ -23,4 +23,5 @@ order_by_type = false
 
 [tool.pytest.ini_options]
 DJANGO_SETTINGS_MODULE = 'ftq.settings'
+addopts = '--reuse-db'
 #python_files = test_*.py *_test.py

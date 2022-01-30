@@ -12,3 +12,6 @@ class Savestate(models.Model):
         DUNGEON_1 = "D1"
 
     current_level = models.CharField(max_length=2, choices=Level.choices, default=Level.DEFAULT)
+
+    def __str__(self):
+        return f"Savestate user:{self.profile.user.username}"
