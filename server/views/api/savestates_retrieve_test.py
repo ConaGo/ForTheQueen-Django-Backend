@@ -14,7 +14,7 @@ from server.models import Savestate
 from server.views.api.savestates import SavestateViewset
 
 
-class SavestateViewsetTest(TestCase):
+class SavestateViewsetRetrieveTest(TestCase):
     def setUp(self):
         self.view = SavestateViewset.as_view({"get": "list"})
         self.factory = APIRequestFactory()
